@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REMAP 3.0 — Build after dark</title>
+  <meta name="description" content="REMAP 3.0 — One night of practical electronics, good questions, and people who like making things work. Model Engineering College, Thrikkakara." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="REMAP 3.0 home">REMAP<span>_3.0</span></a>
+
+    <div class="nav-links" role="list">
+      <a href="#about" role="listitem">Features</a>
+      <a href="#schedule" role="listitem">Schedule</a>
+      <a href="#faq" role="listitem">FAQ</a>
+      <a href="#contact" role="listitem">Contact</a>
+    </div>
+
+    <a href="#register" class="nav-cta">Register Now <span aria-hidden="true">↗</span></a>
+
+    <button
+      class="nav-menu-btn"
+      id="nav-menu-btn"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="nav-drawer"
+    >
+      <span class="hamburger" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+    <div class="nav-drawer-header">
+      <a class="brand" href="#top">REMAP<span>_3.0</span></a>
+      <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Close navigation menu">
+        <span aria-hidden="true">✕</span>
+      </button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Mobile navigation">
+      <a href="#about">Features</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#register">Register Now</a>
+    </nav>
+    <div class="nav-drawer-footer">
+      <p>27–28 SEPT 2026 · Model Engineering College, Thrikkakara</p>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-h1" aria-label="REMAP 3.0">
+          <span class="hero-h1-line" data-hero="1">REMAP</span>
+          <em class="hero-h1-line" data-hero="2">3.0</em>
+        </h1>
+
+        <p class="hero-statement" data-hero="3">An overnight hardware experience for B.Tech students.</p>
+
+        <div class="hero-actions" data-hero="4">
+          <a href="#register" class="btn btn-primary">
+            Get Started <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#schedule" class="btn btn-ghost">
+            See the schedule <span class="btn-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <p class="hero-note" data-hero="5">No prior hardware experience needed.</p>
+      </div>
+
+      <div class="hero-footer" data-hero="6">
+        <div class="hero-footer-left">
+          <span>REMAP</span>
+          <span class="hero-footer-sep">/</span>
+          <span>AN OVERNIGHT HARDWARE EXPERIENCE</span>
+        </div>
+        <div class="hero-footer-right">
+          <span>SEPTEMBER 27–28, 2026</span>
+          <span class="hero-footer-pipe">|</span>
+          <span>24 HOURS</span>
+          <span class="hero-footer-pipe">|</span>
+          <span>MODEL ENGINEERING COLLEGE</span>
+        </div>
+      </div>
+
+      <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to content" data-hero="6">
+        <span class="scroll-label">SCROLL</span>
+        <svg class="scroll-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <div class="about-visual" data-animate="fade">
+          <div class="section-tag" data-animate="tag">01 / THE SIGNAL</div>
+          <div class="about-image-card">
+            <img src="assets/remap-about-workbench.jpg" alt="Hardware workbench soldering macro" class="about-img" loading="lazy" />
+            <div class="about-img-badge">
+              <span class="badge-dot"></span>
+              <span>BENCH_LIVE // MEC LAB 04</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-body">
+          <h2 id="about-heading" data-animate="mask" data-delay="1">
+            WHERE IDEAS GET<br>THEIR <span>HANDS DIRTY.</span>
+          </h2>
+          <p data-animate="fade" data-delay="2">
+            REMAP is not a conference. It is a living workbench: one electric night of sensors, solder, half-formed ideas and the people who know how to make them real.
+          </p>
+          <a href="#register" class="text-link" data-animate="fade" data-delay="3">
+            See what's on the bench <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="about-stats" data-animate="fade" data-delay="4">
+            <div class="stat-box">
+              <span class="stat-number">24H</span>
+              <span class="stat-label">Non-stop sprint</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Hardware hackers</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">₹50K</span>
+              <span class="stat-label">Prize pool</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section class="section section-tracks" aria-labelledby="tracks-heading">
+      <div class="section-heading">
+        <div class="section-tag" data-animate="tag">02 / PICK A TRACK</div>
+        <h2 id="tracks-heading" data-animate="mask" data-delay="1">
+          MAKE NOISE.<br>LEAVE A <span>MARK.</span>
+        </h2>
+      </div>
+
+      <div class="cards" role="list">
+
+        <article class="track-card" role="listitem" data-animate="card" data-delay="0">
+          <span class="card-number" aria-hidden="true">01</span>
+          <div class="card-body">
+            <p class="eyebrow card-eyebrow">HARDWARE LAB</p>
+            <h3>Touch the metal.</h3>
+            <p class="card-desc">Prototype with sensors, microcontrollers and plenty of sharp opinions.</p>
+            <a href="#register" class="card-link">Claim a station <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="track-card" role="listitem" data-animate="card" data-delay="1">
+          <span class="card-number" aria-hidden="true">02</span>
+          <div class="card-body">
+            <p class="eyebrow card-eyebrow">BUILD SPRINT</p>
+            <h3>Make it move.</h3>
+            <p class="card-desc">Turn a messy first thought into a real, testable thing before sunrise.</p>
+            <a href="#register" class="card-link">Join the sprint <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="track-card" role="listitem" data-animate="card" data-delay="2">
+          <span class="card-number" aria-hidden="true">03</span>
+          <div class="card-body">
+            <p class="eyebrow card-eyebrow">OPEN SHOWCASE</p>
+            <h3>Break the silence.</h3>
+            <p class="card-desc">Put your wildest creation under the lights and show what it can do.</p>
+            <a href="#register" class="card-link">Bring your project <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="section section-register" aria-labelledby="register-heading">
+      <div class="register-copy">
+        <div class="section-tag" data-animate="tag">03 / ENTRY PASS</div>
+        <h2 id="register-heading" data-animate="mask" data-delay="1">
+          ONE NIGHT.<br>NO <span>UNDO.</span>
+        </h2>
+        <p data-animate="fade" data-delay="2">
+          Your pass gets you a place at the bench, a full night of hardware, food, fuel and people worth meeting.
+        </p>
+        <div class="availability" data-animate="fade" data-delay="3" aria-label="31 of 80 seats remaining">
+          <span class="availability-dot" aria-hidden="true"></span>
+          31 of 80 seats remaining
+        </div>
+      </div>
+
+      <div class="price-card" data-animate="fade" data-delay="2">
+        <p class="eyebrow">REMAP 3.0 / ALL ACCESS</p>
+        <div class="price" aria-label="999 rupees per person">
+          ₹999 <small>/ person</small>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-wide">
+          Register now <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+        <ul class="pass-includes" aria-label="What's included">
+          <li>Full event access</li>
+          <li>Build materials &amp; workshop kits</li>
+          <li>Dinner, midnight fuel &amp; breakfast</li>
+          <li>REMAP 3.0 field kit</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section section-schedule" aria-labelledby="schedule-heading">
+      <div class="section-heading">
+        <div class="section-tag" data-animate="tag">04 / RUN OF SHOW</div>
+        <h2 id="schedule-heading" data-animate="mask" data-delay="1">
+          KEEP THE<br><span>CURRENT</span> FLOWING.
+        </h2>
+      </div>
+
+      <div
+        class="schedule-tabs"
+        role="tablist"
+        aria-label="Event schedule by day"
+        data-animate="fade"
+        data-delay="2"
+      >
+        <button
+          class="tab-btn active"
+          role="tab"
+          id="tab-oct18"
+          aria-selected="true"
+          aria-controls="panel-oct18"
+          data-day="oct18"
+        >SAT / 18 OCT</button>
+        <button
+          class="tab-btn"
+          role="tab"
+          id="tab-oct19"
+          aria-selected="false"
+          aria-controls="panel-oct19"
+          data-day="oct19"
+        >SUN / 19 OCT</button>
+      </div>
+
+      <div class="schedule-panels">
+        <div
+          class="timeline"
+          id="panel-oct18"
+          role="tabpanel"
+          aria-labelledby="tab-oct18"
+        >
+          <div class="timeline-entry" data-animate="timeline" data-delay="0">
+            <time datetime="2026-10-18T18:00">18:00</time>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-info">
+              <h3>Doors open / warm-up</h3>
+              <p>Hangar A</p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-animate="timeline" data-delay="1">
+            <time datetime="2026-10-18T19:00">19:00</time>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-info">
+              <h3>Opening transmission</h3>
+              <p>Main floor</p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-animate="timeline" data-delay="2">
+            <time datetime="2026-10-18T20:00">20:00</time>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-info">
+              <h3>Build sprint begins</h3>
+              <p>All workbenches</p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-animate="timeline" data-delay="3">
+            <time datetime="2026-10-18T23:30">23:30</time>
+            <span class="timeline-dot timeline-dot--accent" aria-hidden="true"></span>
+            <div class="timeline-info">
+              <h3>Midnight check-in</h3>
+              <p>Fuel station</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="timeline hidden"
+          id="panel-oct19"
+          role="tabpanel"
+          aria-labelledby="tab-oct19"
+          hidden
+        >
+          <div class="timeline-entry" data-animate="timeline" data-delay="0">
+            <time datetime="2026-10-19T01:00">01:00</time>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-info">
+              <h3>Debugging hours</h3>
+              <p>All workbenches</p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-animate="timeline" data-delay="1">
+            <time datetime="2026-10-19T06:00">06:00</time>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-info">
+              <h3>Tools down</h3>
+              <p>Main floor</p>
+            </div>
+          </div>
+          <div class="timeline-entry" data-animate="timeline" data-delay="2">
+            <time datetime="2026-10-19T07:00">07:00</time>
+            <span class="timeline-dot timeline-dot--accent" aria-hidden="true"></span>
+            <div class="timeline-info">
+              <h3>Show &amp; tell</h3>
+              <p>Demo stage</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-faq" aria-labelledby="faq-heading">
+      <div class="faq-left">
+        <div class="section-tag" data-animate="tag">05 / GOOD QUESTIONS</div>
+        <h2 id="faq-heading" data-animate="mask" data-delay="1">
+          BEFORE YOU<br><span>PLUG IN.</span>
+        </h2>
+      </div>
+
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem" data-animate="fade" data-delay="0">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-answer-1"
+            id="faq-btn-1"
+          >
+            <span>Do I need prior hardware experience?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <span class="faq-icon-bar"></span>
+              <span class="faq-icon-bar faq-icon-bar--v"></span>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-answer-1"
+            role="region"
+            aria-labelledby="faq-btn-1"
+          >
+            <p>Not at all. Bring your curiosity; our mentors and track leads will help you find a useful starting point.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem" data-animate="fade" data-delay="1">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-answer-2"
+            id="faq-btn-2"
+          >
+            <span>What should I bring?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <span class="faq-icon-bar"></span>
+              <span class="faq-icon-bar faq-icon-bar--v"></span>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-answer-2"
+            role="region"
+            aria-labelledby="faq-btn-2"
+          >
+            <p>A laptop if you have one, a charger, and any small project you want to work on. Core build tools are provided.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem" data-animate="fade" data-delay="2">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-answer-3"
+            id="faq-btn-3"
+          >
+            <span>Can I come alone?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <span class="faq-icon-bar"></span>
+              <span class="faq-icon-bar faq-icon-bar--v"></span>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-answer-3"
+            role="region"
+            aria-labelledby="faq-btn-3"
+          >
+            <p>Absolutely. Many of the best builds start with a stranger at the next workbench.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem" data-animate="fade" data-delay="3">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-answer-4"
+            id="faq-btn-4"
+          >
+            <span>Is the venue accessible overnight?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <span class="faq-icon-bar"></span>
+              <span class="faq-icon-bar faq-icon-bar--v"></span>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-answer-4"
+            role="region"
+            aria-labelledby="faq-btn-4"
+          >
+            <p>Yes. The venue is staffed throughout the event and has quiet zones, food, first aid and secure bag storage.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="section-final" aria-labelledby="final-heading">
+      <div class="final-inner">
+        <p class="eyebrow" data-animate="tag">THE BENCH IS WAITING</p>
+        <h2 id="final-heading" data-animate="mask" data-delay="1">
+          LET'S BUILD<br><span>SOMETHING LOUD.</span>
+        </h2>
+        <a href="#register" class="btn btn-primary" data-animate="fade" data-delay="2">
+          Get your pass <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="contact-line" data-animate="fade" data-delay="3">
+          Questions? <a href="mailto:hello@remap.org">hello@remap.org</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <a class="brand" href="#top" aria-label="REMAP 3.0 home">REMAP<span>_3.0</span></a>
+    <p>Made for the after-hours engineers.</p>
+    <div class="footer-links">
+      <a href="#" aria-label="REMAP on Instagram">Instagram</a>
+      <a href="#" aria-label="REMAP on LinkedIn">LinkedIn</a>
+      <a href="#" aria-label="REMAP on X/Twitter">X / Twitter</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
