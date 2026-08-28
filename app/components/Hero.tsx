@@ -69,10 +69,6 @@ export default function Hero() {
     opacity: Math.max(0, 1 - ratio * 1.6)
   } : {};
 
-  const footerStyle = !isScrollingPast ? {
-    opacity: Math.max(0, 1 - ratio * 2)
-  } : {};
-
   return (
     <section 
       className="relative w-full h-screen min-h-screen overflow-hidden isolate group" 
@@ -111,28 +107,12 @@ export default function Hero() {
           <a href="#register" className="inline-flex items-center gap-[20px] px-[20px] py-[13px] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase whitespace-nowrap bg-[length:200%_100%] bg-[100%_0] text-[#1a0810] border border-accent transition-all duration-350 ease-out hover:bg-[0_0] hover:border-[#dc3f59] active:bg-[#b02a40] active:border-[#b02a40] group/btn" style={{ backgroundImage: 'linear-gradient(90deg, #dc3f59 50%, var(--accent) 50%)' }}>
             Register Now <span className="inline-block transition-transform duration-200 ease-out group-hover/btn:translate-x-[4px]" aria-hidden="true">→</span>
           </a>
-          <a href="#schedule" className="inline-flex items-center gap-[20px] bg-transparent text-muted px-0 pb-[1px] border-b border-dim font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase transition-colors duration-200 hover:text-paper hover:border-paper group/ghost">
+          <a href="#schedule" className="inline-flex items-center gap-[20px] bg-[#1a1c20] text-paper px-[20px] py-[13px] border border-[#2e3138] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase transition-colors duration-200 hover:bg-[#2e3138] hover:text-white group/ghost">
             See the schedule <span className="inline-block transition-transform duration-200 ease-out group-hover/ghost:translate-y-[2px]" aria-hidden="true">↓</span>
           </a>
         </div>
 
         <p className="mt-[18px] text-dim text-[12px] opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="6">No prior hardware experience needed.</p>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 z-2 flex items-center justify-between p-[18px_24px] md:p-[18px_5vw] lg:p-[18px_7vw] border-t border-rule bg-[#07080a]/90 backdrop-blur-md text-dim font-mono font-medium text-[10px] leading-none tracking-[0.08em] uppercase opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="7" style={footerStyle}>
-        <div className="flex items-center gap-[12px]">
-          <span>REMAP</span>
-          <span className="text-[#f2f0ea]/20">/</span>
-          <span className="hidden md:inline">AN OVERNIGHT HARDWARE EXPERIENCE</span>
-          <span className="md:hidden">HARDWARE EXP</span>
-        </div>
-        <div className="hidden md:flex items-center gap-[12px]">
-          <span>SEPTEMBER 27–28, 2026</span>
-          <span className="text-[#f2f0ea]/20">|</span>
-          <span>24 HOURS</span>
-          <span className="text-[#f2f0ea]/20">|</span>
-          <span>MODEL ENGINEERING COLLEGE</span>
-        </div>
       </div>
     </section>
   );
