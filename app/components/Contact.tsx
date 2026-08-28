@@ -15,9 +15,9 @@ export default function Contact() {
           Get in touch with our event coordinators for registration assistance, technical queries or any other information.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[64px] w-full max-w-[800px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[24px] md:gap-[40px] lg:gap-[64px] w-full max-w-[800px]">
           {/* Anna Ison */}
-          <div className="flex flex-col items-center p-[40px] bg-ink border border-rule transition-all duration-350 ease-out hover:border-accent hover:-translate-y-[4px] group/card1" data-animate="fade" data-delay="3">
+          <div className="flex flex-col items-center p-[24px] md:p-[40px] bg-ink border border-rule transition-all duration-350 ease-out hover:border-accent hover:-translate-y-[4px] group/card1" data-animate="fade" data-delay="3">
             <div className="w-[140px] h-[140px] rounded-full overflow-hidden mb-[24px] border-2 border-rule transition-colors duration-350 group-hover/card1:border-accent">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/annaison.jpg" alt="Anna Ison" className="w-full h-full object-cover filter saturate-0 contrast-[1.1] transition-all duration-500 group-hover/card1:saturate-100" />
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
 
           {/* Nevin Skariah */}
-          <div className="flex flex-col items-center p-[40px] bg-ink border border-rule transition-all duration-350 ease-out hover:border-accent hover:-translate-y-[4px] group/card2" data-animate="fade" data-delay="4">
+          <div className="flex flex-col items-center p-[24px] md:p-[40px] bg-ink border border-rule transition-all duration-350 ease-out hover:border-accent hover:-translate-y-[4px] group/card2" data-animate="fade" data-delay="4">
             <div className="w-[140px] h-[140px] rounded-full overflow-hidden mb-[24px] border-2 border-rule transition-colors duration-350 group-hover/card2:border-accent">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/nevinskariah.jpg" alt="Nevin Skariah" className="w-full h-full object-cover filter saturate-0 contrast-[1.1] transition-all duration-500 group-hover/card2:saturate-100" />
