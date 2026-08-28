@@ -4,8 +4,7 @@ import Features from './components/Features';
 import Register from './components/Register';
 import Schedule from './components/Schedule';
 import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Contact from './components/Contact';;
 
 export default function HomePage() {
   return (
@@ -20,7 +19,6 @@ export default function HomePage() {
         <FAQ />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }
