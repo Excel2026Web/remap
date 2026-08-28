@@ -6,7 +6,7 @@ import { registerData } from '../data/content';
 export default function Register() {
   useScrollReveal();
   return (
-    <section id="register" className="max-w-[1160px] mx-auto px-[24px] md:px-[5vw] lg:px-[7vw] py-[80px] lg:py-[120px] grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-[52px] lg:gap-[80px] items-start border-t border-rule" aria-labelledby="register-heading">
+    <section id="register" className="min-h-[100dvh] content-center max-w-[1160px] mx-auto px-[24px] md:px-[5vw] lg:px-[7vw] py-[80px] lg:py-[120px] grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-[52px] lg:gap-[80px] items-start border-t border-rule" aria-labelledby="register-heading">
       <div className="flex flex-col">
         <div className="text-teal font-mono font-medium text-[10px] leading-none tracking-[0.12em] uppercase mb-[20px]" data-animate="tag">03 / ENTRY PASS</div>
         <h2 id="register-heading" className="text-[clamp(40px,4.8vw,70px)] font-medium leading-[0.88] tracking-[-0.07em] uppercase mb-[24px]" data-animate="mask" data-delay="1">

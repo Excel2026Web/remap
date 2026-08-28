@@ -62,7 +62,7 @@ export default function Schedule() {
   );
 
   return (
-    <section id="schedule" className="max-w-[1160px] mx-auto px-[24px] md:px-[5vw] lg:px-[7vw] py-[80px] lg:py-[120px] border-t border-rule" aria-labelledby="schedule-heading">
+    <section id="schedule" className="min-h-[100dvh] flex flex-col justify-center max-w-[1160px] mx-auto px-[24px] md:px-[5vw] lg:px-[7vw] py-[80px] lg:py-[120px] border-t border-rule" aria-labelledby="schedule-heading">
       <div className="mb-[52px]">
         <div className="text-teal font-mono font-medium text-[10px] leading-none tracking-[0.12em] uppercase mb-[18px]" data-animate="tag">04 / RUN OF SHOW</div>
         <h2 id="schedule-heading" className="max-w-[680px] text-[clamp(40px,4.8vw,70px)] font-medium leading-[0.88] tracking-[-0.07em] uppercase" data-animate="mask" data-delay="1">
