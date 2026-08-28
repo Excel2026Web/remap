@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { heroData } from '../data/content';
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -89,18 +90,18 @@ export default function Hero() {
       ></div>
 
       <div className="relative z-2 max-w-[680px] px-[24px] md:px-[5vw] lg:px-[7vw] pt-[320px] md:pt-[220px] lg:pt-[260px] pb-[120px]" style={contentStyle}>
-        <h1 className="inline-block w-fit text-[min(20vw,96px)] md:text-[clamp(84px,9.4vw,144px)] font-semibold leading-[0.82] md:leading-[0.72] tracking-[-0.095em] uppercase ml-[-2px] md:ml-[-4px]" aria-label="REMAP 3.0">
-          <span className="block opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="1">REMAP</span>
-          <em className="block not-italic text-transparent [-webkit-text-stroke:1px_var(--accent)] md:[-webkit-text-stroke:1.5px_var(--accent)] tracking-[-0.05em] mt-[8px] md:mt-[10px] text-left opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="2">3.0</em>
+        <h1 className="inline-block w-fit text-[min(20vw,96px)] md:text-[clamp(84px,9.4vw,144px)] font-semibold leading-[0.82] md:leading-[0.72] tracking-[-0.095em] uppercase ml-[-2px] md:ml-[-4px]" aria-label={heroData.title}>
+          <span className="block opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="1">{heroData.title.split(' ')[0]}</span>
+          <em className="block not-italic text-transparent [-webkit-text-stroke:1px_var(--accent)] md:[-webkit-text-stroke:1.5px_var(--accent)] tracking-[-0.05em] mt-[8px] md:mt-[10px] text-left opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="2">{heroData.title.split(' ')[1]}</em>
         </h1>
 
         <p className="mt-[20px] md:mt-[24px] text-[14px] md:text-[18px] leading-[1.6] font-medium tracking-[-0.02em] text-paper opacity-0 translate-y-[14px] transition-all duration-550 ease-out max-w-[90%] md:max-w-none" data-hero="3">
-          All-Kerala Hardware Convention — Part of Excel 2025 at Model Engineering College, Thrikkakara. An overnight hardware experience for B.Tech students.
+          {heroData.description}
         </p>
 
         <div className="mt-[16px] text-[12px] md:text-[15px] font-mono text-muted opacity-0 translate-y-[14px] transition-all duration-550 ease-out flex flex-col gap-[4px]" data-hero="4">
-          <div>DATE: September 19, 20 2026</div>
-          <div>VENUE: Govt. Model Engineering College, Thrikkakara</div>
+          <div>DATE: {heroData.date}</div>
+          <div>VENUE: {heroData.venue}</div>
         </div>
 
         <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-[12px] md:gap-[16px] mt-[28px] opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="5">
