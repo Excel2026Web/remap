@@ -72,7 +72,7 @@ export default function Navbar() {
         id="main-nav" 
         role="navigation" 
         aria-label="Main navigation"
-        className={`fixed top-0 left-0 right-0 z-[100] h-[64px] md:h-[72px] flex items-center justify-between px-[24px] md:px-[5vw] lg:px-[7vw] transition-all duration-550 ease-out border-b ${
+        className={`fixed top-0 left-0 right-0 z-[100] h-[72px] md:h-[90px] flex items-center justify-between px-[20px] md:px-[5vw] lg:px-[7vw] transition-all duration-550 ease-out border-b ${
           isScrolled 
             ? 'bg-[#07080a]/90 border-rule backdrop-blur-md' 
             : 'bg-transparent border-transparent'
@@ -81,9 +81,14 @@ export default function Navbar() {
         <a 
           href="#top" 
           aria-label="REMAP 3.0 home"
-          className="font-sans font-semibold text-[17px] tracking-tight text-paper shrink-0"
+          className="flex items-center shrink-0 transition-opacity duration-200 hover:opacity-80"
         >
-          REMAP<span className="text-accent">_3.0</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/logo.png" 
+            alt="REMAP 3.0" 
+            className="h-[60px] md:h-[80px] w-auto object-contain" 
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-[28px]" role="list">
@@ -150,8 +155,13 @@ export default function Navbar() {
         className={`fixed top-0 right-0 bottom-0 z-[200] w-[min(320px,85vw)] bg-surface border-l border-rule flex flex-col p-0 transition-transform duration-550 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex items-center justify-between p-[22px_24px] border-b border-rule">
-          <a href="#top" onClick={closeMobileMenu} className="font-sans font-semibold text-[17px] tracking-tight text-paper">
-            REMAP<span className="text-accent">_3.0</span>
+          <a href="#top" onClick={closeMobileMenu} className="flex items-center" aria-label="REMAP 3.0 home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="/logo.png" 
+              alt="REMAP 3.0" 
+              className="h-[52px] w-auto object-contain" 
+            />
           </a>
           <button 
             id="nav-drawer-close" 
