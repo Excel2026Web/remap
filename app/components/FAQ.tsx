@@ -5,20 +5,28 @@ import useScrollReveal from '../hooks/useScrollReveal';
 
 const faqs = [
   {
-    question: "Do I need prior hardware experience?",
-    answer: "Not at all. Bring your curiosity; our mentors and track leads will help you find a useful starting point."
+    question: "What is REMAP 3.0 and who is it for?",
+    answer: "REMAP 3.0 is an All-Kerala Hardware Convention conducted as part of Excel 2026 at Model Engineering College, Thrikkakara. The programme is intended for 2nd, 3rd and 4th year B.Tech students across Kerala who are interested in hardware, CAD, prototyping and hands-on engineering. It provides participants with opportunities to learn, build, collaborate and interact with fellow hardware enthusiasts."
   },
   {
-    question: "What should I bring?",
-    answer: "A laptop if you have one, a charger, and any small project you want to work on. Core build tools are provided."
+    question: "What can I expect from the overnight programme?",
+    answer: "REMAP 3.0 is designed as an extended hands-on experience from 19th September to 20th September. The programme includes multiple hardware and CAD sessions, along with cultural activities and dinner. The late-night schedule features jamming and fun games, followed by a project-building session in the morning. The event also includes breakfast and an industrial visit to Kerala Startup Mission (KSUM) before concluding with the final project-building session and wrap-up."
   },
   {
-    question: "Can I come alone?",
-    answer: "Absolutely. Many of the best builds start with a stranger at the next workbench."
+    question: "What is covered in the ₹999 registration fee?",
+    answer: "The registration fee of ₹999 covers the complete REMAP 3.0 experience, including the scheduled hardware and CAD sessions, project-building activities, KSUM industrial visit, overnight workspace, jamming and cultural activities, as well as lunch, dinner and breakfast. Participants will also receive guidance throughout the programme and a certificate of participation."
   },
   {
-    question: "Is the venue accessible overnight?",
-    answer: "Yes. The venue is staffed throughout the event and has quiet zones, food, first aid and secure bag storage."
+    question: "What are the hardware and CAD sessions about?",
+    answer: "The convention features dedicated hardware and CAD sessions spread throughout the event. These sessions are designed to provide practical exposure to hardware development and computer-aided design, helping participants strengthen their understanding through guided, hands-on learning. The knowledge gained during these sessions can then be applied during the subsequent project-building sessions."
+  },
+  {
+    question: "What happens during the KSUM industrial visit?",
+    answer: "As part of REMAP 3.0, participants will get an opportunity to visit Kerala Startup Mission (KSUM). The visit is intended to introduce students to Kerala's startup ecosystem and give them a glimpse of how innovative ideas and technology can progress beyond the academic environment. It adds an industry and entrepreneurship perspective to the hands-on learning experience at the convention."
+  },
+  {
+    question: "What should I bring with me for REMAP 3.0?",
+    answer: "Since REMAP 3.0 includes an overnight programme and project-building activities, participants are advised to carry comfortable clothing, personal toiletries, a laptop, a notebook and any other personal essentials they may require. A laptop will be particularly useful for the CAD and project-building sessions. Participants should also come prepared for a full day-and-night of learning, collaboration and hands-on activities."
   }
 ];
 
