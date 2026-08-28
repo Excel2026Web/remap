@@ -22,7 +22,7 @@ export default function Register() {
         <div className="my-[20px] mb-[28px] text-[52px] font-medium tracking-[-0.07em] leading-none" aria-label={`${registerData.price} per person`}>
           {registerData.price} <small className="text-muted font-mono font-normal text-[10px] leading-none tracking-normal">/ person</small>
         </div>
-        <a href="#contact" className="w-full inline-flex items-center justify-between px-[20px] py-[13px] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase whitespace-nowrap bg-[length:200%_100%] bg-[100%_0] text-[#1a0810] border border-accent transition-all duration-350 ease-out hover:bg-[0_0] hover:border-[#dc3f59] active:bg-[#b02a40] active:border-[#b02a40] group/btn" style={{ backgroundImage: 'linear-gradient(90deg, #dc3f59 50%, var(--accent) 50%)' }}>
+        <a href={registerData.registerLink} target="_blank" rel="noopener noreferrer" className="w-full inline-flex items-center justify-between px-[20px] py-[13px] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase whitespace-nowrap bg-[length:200%_100%] bg-[100%_0] text-[#1a0810] border border-accent transition-all duration-350 ease-out hover:bg-[0_0] hover:border-[#dc3f59] active:bg-[#b02a40] active:border-[#b02a40] group/btn" style={{ backgroundImage: 'linear-gradient(90deg, #dc3f59 50%, var(--accent) 50%)' }}>
           Register now <span className="inline-block transition-transform duration-200 ease-out group-hover/btn:translate-x-[4px]" aria-hidden="true">→</span>
         </a>
         <ul className="mt-[28px] pt-[22px] border-t border-rule flex flex-col gap-0" aria-label="What's included">

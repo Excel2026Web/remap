@@ -40,6 +40,7 @@ export const featuresData = [
 
 export const registerData = {
   price: "₹999",
+  registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSe4iPaS7BO9UhEDcqssqP7z12Xtt0Adty6XOY45l37Y5xCgZw/viewform",
   includes: [
     "Hands-on hardware sessions covering Electronics, prototyping and 3D designing",
     "Industrial visit to Kerala Startup Mission (KSUM)",

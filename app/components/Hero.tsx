@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { heroData } from '../data/content';
+import { heroData,registerData } from '../data/content';
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -105,7 +105,7 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-[12px] md:gap-[16px] mt-[28px] opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="5">
-          <a href="#register" className="inline-flex items-center gap-[12px] md:gap-[20px] px-[18px] md:px-[20px] py-[13px] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase whitespace-nowrap bg-[length:200%_100%] bg-[100%_0] text-[#1a0810] border border-accent transition-all duration-350 ease-out hover:bg-[0_0] hover:border-[#dc3f59] active:bg-[#b02a40] active:border-[#b02a40] group/btn" style={{ backgroundImage: 'linear-gradient(90deg, #dc3f59 50%, var(--accent) 50%)' }}>
+          <a href={registerData.registerLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-[12px] md:gap-[20px] px-[18px] md:px-[20px] py-[13px] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase whitespace-nowrap bg-[length:200%_100%] bg-[100%_0] text-[#1a0810] border border-accent transition-all duration-350 ease-out hover:bg-[0_0] hover:border-[#dc3f59] active:bg-[#b02a40] active:border-[#b02a40] group/btn" style={{ backgroundImage: 'linear-gradient(90deg, #dc3f59 50%, var(--accent) 50%)' }}>
             Register Now <span className="inline-block transition-transform duration-200 ease-out group-hover/btn:translate-x-[4px]" aria-hidden="true">→</span>
           </a>
           <a href="#schedule" className="inline-flex items-center gap-[12px] md:gap-[20px] bg-[#1a1c20] text-paper px-[18px] md:px-[20px] py-[13px] border border-[#2e3138] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase transition-colors duration-200 hover:bg-[#2e3138] hover:text-white group/ghost">
