@@ -72,6 +72,7 @@ export default function Hero() {
 
   return (
     <section 
+      id="top"
       className="relative w-full h-screen min-h-screen overflow-hidden isolate group" 
       aria-label="Hero"
     >
