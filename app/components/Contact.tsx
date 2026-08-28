@@ -1,4 +1,9 @@
+'use client';
+
+import useScrollReveal from '../hooks/useScrollReveal';
+
 export default function Contact() {
+  useScrollReveal();
   return (
     <section id="contact" className="section-final" aria-labelledby="final-heading">
       <div className="final-inner">

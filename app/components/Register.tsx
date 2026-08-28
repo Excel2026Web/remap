@@ -1,4 +1,9 @@
+'use client';
+
+import useScrollReveal from '../hooks/useScrollReveal';
+
 export default function Register() {
+  useScrollReveal();
   return (
     <section id="register" className="section section-register" aria-labelledby="register-heading">
       <div className="register-copy">

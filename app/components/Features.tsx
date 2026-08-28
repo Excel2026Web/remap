@@ -1,4 +1,9 @@
+'use client';
+
+import useScrollReveal from '../hooks/useScrollReveal';
+
 export default function Features() {
+  useScrollReveal();
   return (
     <>
       {/* About Section */}

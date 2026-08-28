@@ -1,4 +1,3 @@
-import Scripts from './Scripts';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -21,11 +20,7 @@ export default function HomePage() {
         <FAQ />
         <Contact />
       </main>
-
       <Footer />
-
-      {/* Client-side scripts */}
-      <Scripts />
     </>
   );
 }
