@@ -19,6 +19,7 @@ export default function Hero() {
       '4': 420,
       '5': 520,
       '6': 600,
+      '7': 680,
     };
 
     if (prefersReducedMotion) {
@@ -97,21 +98,28 @@ export default function Hero() {
           <em className="block not-italic text-transparent [-webkit-text-stroke:1px_var(--accent)] md:[-webkit-text-stroke:1.5px_var(--accent)] tracking-[-0.05em] mt-[8px] md:mt-[10px] text-left opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="2">3.0</em>
         </h1>
 
-        <p className="mt-[20px] md:mt-[24px] text-[16px] md:text-[20px] font-medium tracking-[-0.03em] text-paper opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="3">An overnight hardware experience for B.Tech students.</p>
+        <p className="mt-[20px] md:mt-[24px] text-[15px] md:text-[18px] leading-[1.6] font-medium tracking-[-0.02em] text-paper opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="3">
+          All-Kerala Hardware Convention — Part of Excel 2025 at Model Engineering College, Thrikkakara. An overnight hardware experience for B.Tech students.
+        </p>
 
-        <div className="flex flex-wrap items-center gap-[16px] md:gap-[24px] mt-[28px] opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="4">
+        <div className="mt-[16px] text-[13px] md:text-[15px] font-mono text-muted opacity-0 translate-y-[14px] transition-all duration-550 ease-out flex flex-col gap-[4px]" data-hero="4">
+          <div>DATE: September 19, 20 2026</div>
+          <div>VENUE: Govt. Model Engineering College, Thrikkakara</div>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-[16px] md:gap-[24px] mt-[28px] opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="5">
           <a href="#register" className="inline-flex items-center gap-[20px] px-[20px] py-[13px] font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase whitespace-nowrap bg-[length:200%_100%] bg-[100%_0] text-[#1a0810] border border-accent transition-all duration-350 ease-out hover:bg-[0_0] hover:border-[#dc3f59] active:bg-[#b02a40] active:border-[#b02a40] group/btn" style={{ backgroundImage: 'linear-gradient(90deg, #dc3f59 50%, var(--accent) 50%)' }}>
-            Get Started <span className="inline-block transition-transform duration-200 ease-out group-hover/btn:translate-x-[4px]" aria-hidden="true">→</span>
+            Register Now <span className="inline-block transition-transform duration-200 ease-out group-hover/btn:translate-x-[4px]" aria-hidden="true">→</span>
           </a>
           <a href="#schedule" className="inline-flex items-center gap-[20px] bg-transparent text-muted px-0 pb-[1px] border-b border-dim font-mono font-medium text-[11px] leading-none tracking-[0.04em] uppercase transition-colors duration-200 hover:text-paper hover:border-paper group/ghost">
             See the schedule <span className="inline-block transition-transform duration-200 ease-out group-hover/ghost:translate-y-[2px]" aria-hidden="true">↓</span>
           </a>
         </div>
 
-        <p className="mt-[18px] text-dim text-[12px] opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="5">No prior hardware experience needed.</p>
+        <p className="mt-[18px] text-dim text-[12px] opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="6">No prior hardware experience needed.</p>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-2 flex items-center justify-between p-[18px_24px] md:p-[18px_5vw] lg:p-[18px_7vw] border-t border-rule bg-[#07080a]/90 backdrop-blur-md text-dim font-mono font-medium text-[10px] leading-none tracking-[0.08em] uppercase opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="6" style={footerStyle}>
+      <div className="absolute bottom-0 left-0 right-0 z-2 flex items-center justify-between p-[18px_24px] md:p-[18px_5vw] lg:p-[18px_7vw] border-t border-rule bg-[#07080a]/90 backdrop-blur-md text-dim font-mono font-medium text-[10px] leading-none tracking-[0.08em] uppercase opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="7" style={footerStyle}>
         <div className="flex items-center gap-[12px]">
           <span>REMAP</span>
           <span className="text-[#f2f0ea]/20">/</span>
@@ -126,25 +134,6 @@ export default function Hero() {
           <span>MODEL ENGINEERING COLLEGE</span>
         </div>
       </div>
-
-      <a href="#about" className="absolute bottom-[60px] left-1/2 -translate-x-1/2 translate-y-[6px] z-3 inline-flex flex-col items-center gap-[6px] text-[#f2f0ea]/40 font-mono font-medium text-[8px] leading-none tracking-[0.18em] uppercase p-[8px_16px] transition-all duration-700 ease-out opacity-0 hover:text-teal group/indicator" aria-label="Scroll to content" data-hero="6">
-        <span>SCROLL</span>
-        <svg
-          className="animate-[scrollFloat_2.4s_cubic-bezier(0.65,0,0.35,1)_infinite]"
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <line x1="12" y1="5" x2="12" y2="19"></line>
-          <polyline points="19 12 12 19 5 12"></polyline>
-        </svg>
-      </a>
     </section>
   );
 }
