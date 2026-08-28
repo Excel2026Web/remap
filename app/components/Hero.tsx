@@ -88,7 +88,7 @@ export default function Hero() {
         }}
       ></div>
 
-      <div className="relative z-2 max-w-[680px] px-[24px] md:px-[5vw] lg:px-[7vw] pt-[clamp(130px,18vh,190px)] pb-[120px]" style={contentStyle}>
+      <div className="relative z-2 max-w-[680px] px-[24px] md:px-[5vw] lg:px-[7vw] pt-[140px] md:pt-[220px] lg:pt-[260px] pb-[120px]" style={contentStyle}>
         <h1 className="inline-block w-fit text-[min(20vw,96px)] md:text-[clamp(84px,9.4vw,144px)] font-semibold leading-[0.82] md:leading-[0.72] tracking-[-0.095em] uppercase ml-[-2px] md:ml-[-4px]" aria-label="REMAP 3.0">
           <span className="block opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="1">REMAP</span>
           <em className="block not-italic text-transparent [-webkit-text-stroke:1px_var(--accent)] md:[-webkit-text-stroke:1.5px_var(--accent)] tracking-[-0.05em] mt-[8px] md:mt-[10px] text-left opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="2">3.0</em>
