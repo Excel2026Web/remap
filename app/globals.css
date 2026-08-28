@@ -618,7 +618,7 @@ h2 span {
       rgba(7, 8, 10, 0.72) 0%,
       transparent 38%
     ),
-    url('/remap-hero-workbench-clear.png');
+    url('/hero-clear.png');
   background-size: cover;
   background-position: 56% center;
   filter: saturate(0.72) contrast(1.03) brightness(0.96);
@@ -1540,7 +1540,7 @@ h2 span {
         rgba(7, 8, 10, 0.90) 0%,
         transparent 52%
       ),
-      url('/remap-hero-workbench-clear.png');
+      url('/hero-clear.png');
     background-position: 72% center;
     filter: saturate(0.68) brightness(0.88);
   }

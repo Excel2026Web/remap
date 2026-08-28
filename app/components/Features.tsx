@@ -14,7 +14,7 @@ export default function Features() {
             <div className="about-image-card">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/remap-about-workbench.jpg"
+                src="/about.jpg"
                 alt="Hardware workbench soldering macro"
                 className="about-img"
                 loading="lazy"
