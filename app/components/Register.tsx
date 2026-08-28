@@ -14,10 +14,6 @@ export default function Register() {
         <p className="max-w-[440px] text-muted text-[16px] leading-[1.75] mb-[28px]" data-animate="fade" data-delay="2">
           Your pass gets you a place at the bench, a full night of hardware, food, fuel and people worth meeting.
         </p>
-        <div className="flex items-center gap-[9px] text-paper font-mono font-normal text-[11px] leading-none tracking-[0.03em]" data-animate="fade" data-delay="3" aria-label="31 of 80 seats remaining">
-          <span className="inline-block w-[6px] h-[6px] rounded-full bg-accent shrink-0 animate-[pulse_2.4s_ease-in-out_infinite]" aria-hidden="true"></span>
-          31 of 80 seats remaining
-        </div>
       </div>
 
       <div className="border-t-2 border-paper pt-[24px]" data-animate="fade" data-delay="2">
@@ -29,10 +25,13 @@ export default function Register() {
           Register now <span className="inline-block transition-transform duration-200 ease-out group-hover/btn:translate-x-[4px]" aria-hidden="true">→</span>
         </a>
         <ul className="mt-[28px] pt-[22px] border-t border-rule flex flex-col gap-0" aria-label="What's included">
-          <li className="flex items-center gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Full event access</li>
-          <li className="flex items-center gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Build materials &amp; workshop kits</li>
-          <li className="flex items-center gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Dinner, midnight fuel &amp; breakfast</li>
-          <li className="flex items-center gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">REMAP 3.0 field kit</li>
+          <li className="flex gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Hands-on hardware sessions covering Electronics, prototyping and 3D designing</li>
+          <li className="flex gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Industrial visit to Kerala Startup Mission (KSUM)</li>
+          <li className="flex gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Overnight project-building session with expert guidance</li>
+          <li className="flex gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Midnight jamming session for cultural experience</li>
+          <li className="flex gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">All meals included</li>
+          <li className="flex gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Networking opportunities with hardware engineers</li>
+          <li className="flex gap-[10px] py-[8px] text-muted font-mono font-normal text-[11px] leading-[1.6] tracking-[0.01em] before:content-['✓'] before:text-teal before:shrink-0">Certificate of participation</li>
         </ul>
       </div>
     </section>
