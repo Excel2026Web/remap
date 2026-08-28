@@ -117,13 +117,6 @@ export default function Navbar() {
           >Contact</a>
         </div>
 
-        <a 
-          href="#register" 
-          className="hidden md:inline-block font-mono font-medium text-[11px] tracking-[0.04em] uppercase text-paper px-[14px] py-[9px] border border-[#f2f0ea]/40 transition-colors duration-200 hover:border-accent"
-        >
-          Register Now <span className="text-accent" aria-hidden="true">↗</span>
-        </a>
-
         <button
           id="nav-menu-btn"
           aria-label="Open navigation menu"
