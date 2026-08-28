@@ -74,12 +74,12 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative h-[min(940px,100svh)] min-h-[680px] md:min-h-[720px] overflow-hidden border-b border-rule isolate group before:content-[''] before:absolute before:z-1 before:left-[24px] md:before:left-[calc(5vw-30px)] lg:before:left-[calc(7vw-30px)] before:top-[64px] md:before:top-[72px] before:bottom-[80px] before:border-l before:border-[rgba(242,240,234,0.14)] before:pointer-events-none hidden md:block" 
+      className="relative w-full h-screen min-h-screen overflow-hidden isolate group" 
       aria-label="Hero"
     >
       {/* Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-[position:72%_center] md:bg-[position:56%_center] will-change-transform filter saturate-[0.68] brightness-[0.88] md:saturate-[0.72] md:contrast-[1.03] md:brightness-[0.96]" 
+        className="absolute inset-0 w-full h-full bg-cover bg-[position:72%_center] md:bg-[position:56%_center] will-change-transform filter saturate-[0.68] brightness-[0.88] md:saturate-[0.72] md:contrast-[1.03] md:brightness-[0.96]" 
         aria-hidden="true" 
         style={{
           backgroundImage: `
@@ -91,7 +91,7 @@ export default function Hero() {
         }}
       ></div>
 
-      <div className="relative z-2 max-w-[680px] px-[24px] md:px-[5vw] lg:px-[7vw] pt-[clamp(140px,18vh,190px)] pb-[120px]" style={contentStyle}>
+      <div className="relative z-2 max-w-[680px] px-[24px] md:px-[5vw] lg:px-[7vw] pt-[clamp(130px,18vh,190px)] pb-[120px]" style={contentStyle}>
         <h1 className="inline-block w-fit text-[min(20vw,96px)] md:text-[clamp(84px,9.4vw,144px)] font-semibold leading-[0.82] md:leading-[0.72] tracking-[-0.095em] uppercase ml-[-2px] md:ml-[-4px]" aria-label="REMAP 3.0">
           <span className="block opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="1">REMAP</span>
           <em className="block not-italic text-transparent [-webkit-text-stroke:1px_var(--accent)] md:[-webkit-text-stroke:1.5px_var(--accent)] tracking-[-0.05em] mt-[8px] md:mt-[10px] text-left opacity-0 translate-y-[14px] transition-all duration-550 ease-out" data-hero="2">3.0</em>
