@@ -68,71 +68,116 @@ export default function Navbar() {
   return (
     <>
       {/* Navigation */}
-      <nav className={`nav ${isScrolled ? 'scrolled' : ''}`} id="main-nav" role="navigation" aria-label="Main navigation">
-        <a className="brand" href="#top" aria-label="REMAP 3.0 home">
-          REMAP<span>_3.0</span>
+      <nav 
+        id="main-nav" 
+        role="navigation" 
+        aria-label="Main navigation"
+        className={`fixed top-0 left-0 right-0 z-[100] h-[64px] md:h-[72px] flex items-center justify-between px-[24px] md:px-[5vw] lg:px-[7vw] transition-all duration-550 ease-out border-b ${
+          isScrolled 
+            ? 'bg-[#07080a]/90 border-rule backdrop-blur-md' 
+            : 'bg-transparent border-transparent'
+        }`}
+      >
+        <a 
+          href="#top" 
+          aria-label="REMAP 3.0 home"
+          className="font-sans font-semibold text-[17px] tracking-tight text-paper shrink-0"
+        >
+          REMAP<span className="text-accent">_3.0</span>
         </a>
 
-        <div className="nav-links" role="list">
-          <a href="#about" role="listitem" className={activeSection === 'about' ? 'active' : ''}>Features</a>
-          <a href="#schedule" role="listitem" className={activeSection === 'schedule' ? 'active' : ''}>Schedule</a>
-          <a href="#faq" role="listitem" className={activeSection === 'faq' ? 'active' : ''}>FAQ</a>
-          <a href="#contact" role="listitem" className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
+        <div className="hidden md:flex items-center gap-[28px]" role="list">
+          <a 
+            href="#about" 
+            role="listitem" 
+            className={`relative font-sans text-[14px] pb-[2px] transition-colors duration-200 after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:bg-teal after:transition-all after:duration-350 hover:text-paper hover:after:w-full ${
+              activeSection === 'about' ? 'text-paper after:w-full' : 'text-muted after:w-0'
+            }`}
+          >Features</a>
+          <a 
+            href="#schedule" 
+            role="listitem" 
+            className={`relative font-sans text-[14px] pb-[2px] transition-colors duration-200 after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:bg-teal after:transition-all after:duration-350 hover:text-paper hover:after:w-full ${
+              activeSection === 'schedule' ? 'text-paper after:w-full' : 'text-muted after:w-0'
+            }`}
+          >Schedule</a>
+          <a 
+            href="#faq" 
+            role="listitem" 
+            className={`relative font-sans text-[14px] pb-[2px] transition-colors duration-200 after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:bg-teal after:transition-all after:duration-350 hover:text-paper hover:after:w-full ${
+              activeSection === 'faq' ? 'text-paper after:w-full' : 'text-muted after:w-0'
+            }`}
+          >FAQ</a>
+          <a 
+            href="#contact" 
+            role="listitem" 
+            className={`relative font-sans text-[14px] pb-[2px] transition-colors duration-200 after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:bg-teal after:transition-all after:duration-350 hover:text-paper hover:after:w-full ${
+              activeSection === 'contact' ? 'text-paper after:w-full' : 'text-muted after:w-0'
+            }`}
+          >Contact</a>
         </div>
 
-        <a href="#register" className="nav-cta">
-          Register Now <span aria-hidden="true">↗</span>
+        <a 
+          href="#register" 
+          className="hidden md:inline-block font-mono font-medium text-[11px] tracking-[0.04em] uppercase text-paper px-[14px] py-[9px] border border-[#f2f0ea]/40 transition-colors duration-200 hover:border-accent"
+        >
+          Register Now <span className="text-accent" aria-hidden="true">↗</span>
         </a>
 
         <button
-          className="nav-menu-btn"
           id="nav-menu-btn"
           aria-label="Open navigation menu"
           aria-expanded={isMobileMenuOpen}
           aria-controls="nav-drawer"
           onClick={toggleMobileMenu}
+          className="md:hidden flex items-center justify-center w-[40px] h-[40px] bg-transparent border border-rule transition-colors duration-200 hover:border-muted p-0"
         >
-          <span className="hamburger" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span className="flex flex-col gap-[5px] w-[18px]" aria-hidden="true">
+            <span className={`block h-[1px] bg-paper transition-all duration-350 origin-center ${isMobileMenuOpen ? 'translate-y-[6px] rotate-45' : ''}`}></span>
+            <span className={`block h-[1px] bg-paper transition-all duration-200 origin-center ${isMobileMenuOpen ? 'opacity-0 scale-x-0' : ''}`}></span>
+            <span className={`block h-[1px] bg-paper transition-all duration-350 origin-center ${isMobileMenuOpen ? 'translate-y-[-6px] -rotate-45' : ''}`}></span>
           </span>
         </button>
       </nav>
 
       {/* Mobile Navigation Drawer */}
       <div 
-        className={`nav-overlay ${isMobileMenuOpen ? 'open' : ''}`} 
         id="nav-overlay" 
         aria-hidden={!isMobileMenuOpen}
         onClick={closeMobileMenu}
+        className={`fixed inset-0 z-[199] bg-[#07080a]/70 backdrop-blur-sm transition-opacity duration-350 pointer-events-none ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'}`}
       ></div>
       
       <div
-        className={`nav-drawer ${isMobileMenuOpen ? 'open' : ''}`}
         id="nav-drawer"
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
         hidden={!isMobileMenuOpen}
+        className={`fixed top-0 right-0 bottom-0 z-[200] w-[min(320px,85vw)] bg-surface border-l border-rule flex flex-col p-0 transition-transform duration-550 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <div className="nav-drawer-header">
-          <a className="brand" href="#top" onClick={closeMobileMenu}>
-            REMAP<span>_3.0</span>
+        <div className="flex items-center justify-between p-[22px_24px] border-b border-rule">
+          <a href="#top" onClick={closeMobileMenu} className="font-sans font-semibold text-[17px] tracking-tight text-paper">
+            REMAP<span className="text-accent">_3.0</span>
           </a>
-          <button className="nav-drawer-close" id="nav-drawer-close" aria-label="Close navigation menu" onClick={closeMobileMenu}>
+          <button 
+            id="nav-drawer-close" 
+            aria-label="Close navigation menu" 
+            onClick={closeMobileMenu}
+            className="w-[36px] h-[36px] bg-transparent border border-rule text-muted text-[14px] flex items-center justify-center transition-colors duration-200 hover:text-paper hover:border-muted"
+          >
             <span aria-hidden="true">✕</span>
           </button>
         </div>
-        <nav className="nav-drawer-links" aria-label="Mobile navigation">
-          <a href="#about" onClick={closeMobileMenu}>Features</a>
-          <a href="#schedule" onClick={closeMobileMenu}>Schedule</a>
-          <a href="#faq" onClick={closeMobileMenu}>FAQ</a>
-          <a href="#contact" onClick={closeMobileMenu}>Contact</a>
-          <a href="#register" onClick={closeMobileMenu}>Register Now</a>
+        <nav className="flex flex-col p-[32px_24px] gap-0 flex-1" aria-label="Mobile navigation">
+          <a href="#about" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-t border-rule transition-colors duration-200 hover:text-paper">Features</a>
+          <a href="#schedule" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Schedule</a>
+          <a href="#faq" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">FAQ</a>
+          <a href="#contact" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Contact</a>
+          <a href="#register" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Register Now</a>
         </nav>
-        <div className="nav-drawer-footer">
-          <p>27–28 SEPT 2026 · Model Engineering College, Thrikkakara</p>
+        <div className="p-[24px] border-t border-rule">
+          <p className="text-dim font-mono font-normal text-[10px] tracking-[0.08em] uppercase">27–28 SEPT 2026 · Model Engineering College, Thrikkakara</p>
         </div>
       </div>
     </>

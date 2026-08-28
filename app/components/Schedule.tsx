@@ -27,23 +27,27 @@ export default function Schedule() {
   };
 
   return (
-    <section id="schedule" className="section section-schedule" aria-labelledby="schedule-heading">
-      <div className="section-heading">
-        <div className="section-tag" data-animate="tag">04 / RUN OF SHOW</div>
-        <h2 id="schedule-heading" data-animate="mask" data-delay="1">
-          KEEP THE<br /><span>CURRENT</span> FLOWING.
+    <section id="schedule" className="max-w-[1160px] mx-auto px-[24px] md:px-[5vw] lg:px-[7vw] py-[80px] lg:py-[120px] border-t border-rule" aria-labelledby="schedule-heading">
+      <div className="mb-[52px]">
+        <div className="text-teal font-mono font-medium text-[10px] leading-none tracking-[0.12em] uppercase mb-[18px]" data-animate="tag">04 / RUN OF SHOW</div>
+        <h2 id="schedule-heading" className="max-w-[680px] text-[clamp(40px,4.8vw,70px)] font-medium leading-[0.88] tracking-[-0.07em] uppercase" data-animate="mask" data-delay="1">
+          KEEP THE<br /><span className="text-accent">CURRENT FLOWING.</span>
         </h2>
       </div>
 
       <div
-        className="schedule-tabs"
+        className="flex gap-[4px] mb-[4px]"
         role="tablist"
         aria-label="Event schedule by day"
         data-animate="fade"
         data-delay="2"
       >
         <button
-          className={`tab-btn ${activeTab === 'oct18' ? 'active' : ''}`}
+          className={`px-[16px] py-[10px] border font-mono font-medium text-[10px] leading-none tracking-[0.08em] uppercase transition-colors duration-200 ${
+            activeTab === 'oct18' 
+              ? 'bg-paper text-ink border-paper' 
+              : 'bg-transparent text-muted border-transparent hover:text-paper hover:border-rule'
+          }`}
           role="tab"
           id="tab-oct18"
           aria-selected={activeTab === 'oct18'}
@@ -53,7 +57,11 @@ export default function Schedule() {
         >SAT / 18 OCT</button>
         
         <button
-          className={`tab-btn ${activeTab === 'oct19' ? 'active' : ''}`}
+          className={`px-[16px] py-[10px] border font-mono font-medium text-[10px] leading-none tracking-[0.08em] uppercase transition-colors duration-200 ${
+            activeTab === 'oct19' 
+              ? 'bg-paper text-ink border-paper' 
+              : 'bg-transparent text-muted border-transparent hover:text-paper hover:border-rule'
+          }`}
           role="tab"
           id="tab-oct19"
           aria-selected={activeTab === 'oct19'}
@@ -63,79 +71,79 @@ export default function Schedule() {
         >SUN / 19 OCT</button>
       </div>
 
-      <div className="schedule-panels">
+      <div className="relative">
         {/* OCT 18 PANEL */}
         <div
-          className={`timeline ${activeTab !== 'oct18' ? 'hidden' : ''}`}
+          className={`border-t border-rule ${activeTab !== 'oct18' ? 'hidden' : ''}`}
           id="panel-oct18"
           role="tabpanel"
           aria-labelledby="tab-oct18"
           hidden={activeTab !== 'oct18'}
         >
-          <div className="timeline-entry" data-animate="timeline" data-delay="0">
-            <time dateTime="2026-10-18T18:00">18:00</time>
-            <span className="timeline-dot" aria-hidden="true"></span>
-            <div className="timeline-info">
-              <h3>Doors open / warm-up</h3>
-              <p>Hangar A</p>
+          <div className="grid grid-cols-[110px_24px_1fr] items-center py-[26px] border-b border-rule gap-0 transition-colors duration-200" data-animate="timeline" data-delay="0">
+            <time dateTime="2026-10-18T18:00" className="text-muted font-mono font-normal text-[11px] leading-none tracking-[0.04em]">18:00</time>
+            <span className="w-[6px] h-[6px] rounded-full bg-teal justify-self-center" aria-hidden="true"></span>
+            <div>
+              <h3 className="text-[16px] font-normal tracking-[-0.025em] text-paper">Doors open / warm-up</h3>
+              <p className="mt-[3px] text-dim font-mono font-normal text-[11px] leading-none">Hangar A</p>
             </div>
           </div>
-          <div className="timeline-entry" data-animate="timeline" data-delay="1">
-            <time dateTime="2026-10-18T19:00">19:00</time>
-            <span className="timeline-dot" aria-hidden="true"></span>
-            <div className="timeline-info">
-              <h3>Opening transmission</h3>
-              <p>Main floor</p>
+          <div className="grid grid-cols-[110px_24px_1fr] items-center py-[26px] border-b border-rule gap-0 transition-colors duration-200" data-animate="timeline" data-delay="1">
+            <time dateTime="2026-10-18T19:00" className="text-muted font-mono font-normal text-[11px] leading-none tracking-[0.04em]">19:00</time>
+            <span className="w-[6px] h-[6px] rounded-full bg-teal justify-self-center" aria-hidden="true"></span>
+            <div>
+              <h3 className="text-[16px] font-normal tracking-[-0.025em] text-paper">Opening transmission</h3>
+              <p className="mt-[3px] text-dim font-mono font-normal text-[11px] leading-none">Main floor</p>
             </div>
           </div>
-          <div className="timeline-entry" data-animate="timeline" data-delay="2">
-            <time dateTime="2026-10-18T20:00">20:00</time>
-            <span className="timeline-dot" aria-hidden="true"></span>
-            <div className="timeline-info">
-              <h3>Build sprint begins</h3>
-              <p>All workbenches</p>
+          <div className="grid grid-cols-[110px_24px_1fr] items-center py-[26px] border-b border-rule gap-0 transition-colors duration-200" data-animate="timeline" data-delay="2">
+            <time dateTime="2026-10-18T20:00" className="text-muted font-mono font-normal text-[11px] leading-none tracking-[0.04em]">20:00</time>
+            <span className="w-[6px] h-[6px] rounded-full bg-teal justify-self-center" aria-hidden="true"></span>
+            <div>
+              <h3 className="text-[16px] font-normal tracking-[-0.025em] text-paper">Build sprint begins</h3>
+              <p className="mt-[3px] text-dim font-mono font-normal text-[11px] leading-none">All workbenches</p>
             </div>
           </div>
-          <div className="timeline-entry" data-animate="timeline" data-delay="3">
-            <time dateTime="2026-10-18T23:30">23:30</time>
-            <span className="timeline-dot timeline-dot--accent" aria-hidden="true"></span>
-            <div className="timeline-info">
-              <h3>Midnight check-in</h3>
-              <p>Fuel station</p>
+          <div className="grid grid-cols-[110px_24px_1fr] items-center py-[26px] border-b border-rule gap-0 transition-colors duration-200" data-animate="timeline" data-delay="3">
+            <time dateTime="2026-10-18T23:30" className="text-muted font-mono font-normal text-[11px] leading-none tracking-[0.04em]">23:30</time>
+            <span className="w-[6px] h-[6px] rounded-full bg-accent justify-self-center" aria-hidden="true"></span>
+            <div>
+              <h3 className="text-[16px] font-normal tracking-[-0.025em] text-paper">Midnight check-in</h3>
+              <p className="mt-[3px] text-dim font-mono font-normal text-[11px] leading-none">Fuel station</p>
             </div>
           </div>
         </div>
 
         {/* OCT 19 PANEL */}
         <div
-          className={`timeline ${activeTab !== 'oct19' ? 'hidden' : ''}`}
+          className={`border-t border-rule ${activeTab !== 'oct19' ? 'hidden' : ''}`}
           id="panel-oct19"
           role="tabpanel"
           aria-labelledby="tab-oct19"
           hidden={activeTab !== 'oct19'}
         >
-          <div className="timeline-entry" data-animate="timeline" data-delay="0">
-            <time dateTime="2026-10-19T01:00">01:00</time>
-            <span className="timeline-dot" aria-hidden="true"></span>
-            <div className="timeline-info">
-              <h3>Debugging hours</h3>
-              <p>All workbenches</p>
+          <div className="grid grid-cols-[110px_24px_1fr] items-center py-[26px] border-b border-rule gap-0 transition-colors duration-200" data-animate="timeline" data-delay="0">
+            <time dateTime="2026-10-19T01:00" className="text-muted font-mono font-normal text-[11px] leading-none tracking-[0.04em]">01:00</time>
+            <span className="w-[6px] h-[6px] rounded-full bg-teal justify-self-center" aria-hidden="true"></span>
+            <div>
+              <h3 className="text-[16px] font-normal tracking-[-0.025em] text-paper">Debugging hours</h3>
+              <p className="mt-[3px] text-dim font-mono font-normal text-[11px] leading-none">All workbenches</p>
             </div>
           </div>
-          <div className="timeline-entry" data-animate="timeline" data-delay="1">
-            <time dateTime="2026-10-19T06:00">06:00</time>
-            <span className="timeline-dot" aria-hidden="true"></span>
-            <div className="timeline-info">
-              <h3>Tools down</h3>
-              <p>Main floor</p>
+          <div className="grid grid-cols-[110px_24px_1fr] items-center py-[26px] border-b border-rule gap-0 transition-colors duration-200" data-animate="timeline" data-delay="1">
+            <time dateTime="2026-10-19T06:00" className="text-muted font-mono font-normal text-[11px] leading-none tracking-[0.04em]">06:00</time>
+            <span className="w-[6px] h-[6px] rounded-full bg-teal justify-self-center" aria-hidden="true"></span>
+            <div>
+              <h3 className="text-[16px] font-normal tracking-[-0.025em] text-paper">Tools down</h3>
+              <p className="mt-[3px] text-dim font-mono font-normal text-[11px] leading-none">Main floor</p>
             </div>
           </div>
-          <div className="timeline-entry" data-animate="timeline" data-delay="2">
-            <time dateTime="2026-10-19T07:00">07:00</time>
-            <span className="timeline-dot timeline-dot--accent" aria-hidden="true"></span>
-            <div className="timeline-info">
-              <h3>Show &amp; tell</h3>
-              <p>Demo stage</p>
+          <div className="grid grid-cols-[110px_24px_1fr] items-center py-[26px] border-b border-rule gap-0 transition-colors duration-200" data-animate="timeline" data-delay="2">
+            <time dateTime="2026-10-19T07:00" className="text-muted font-mono font-normal text-[11px] leading-none tracking-[0.04em]">07:00</time>
+            <span className="w-[6px] h-[6px] rounded-full bg-accent justify-self-center" aria-hidden="true"></span>
+            <div>
+              <h3 className="text-[16px] font-normal tracking-[-0.025em] text-paper">Show &amp; tell</h3>
+              <p className="mt-[3px] text-dim font-mono font-normal text-[11px] leading-none">Demo stage</p>
             </div>
           </div>
         </div>
