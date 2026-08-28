@@ -93,12 +93,26 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-[28px]" role="list">
           <a 
-            href="#about" 
+            href="#top" 
             role="listitem" 
             className={`relative font-sans text-[14px] pb-[2px] transition-colors duration-200 after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:bg-teal after:transition-all after:duration-350 hover:text-paper hover:after:w-full ${
-              activeSection === 'about' ? 'text-paper after:w-full' : 'text-muted after:w-0'
+              activeSection === 'top' ? 'text-paper after:w-full' : 'text-muted after:w-0'
+            }`}
+          >Home</a>
+          <a 
+            href="#features" 
+            role="listitem" 
+            className={`relative font-sans text-[14px] pb-[2px] transition-colors duration-200 after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:bg-teal after:transition-all after:duration-350 hover:text-paper hover:after:w-full ${
+              activeSection === 'features' ? 'text-paper after:w-full' : 'text-muted after:w-0'
             }`}
           >Features</a>
+          <a 
+            href="#register" 
+            role="listitem" 
+            className={`relative font-sans text-[14px] pb-[2px] transition-colors duration-200 after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:bg-teal after:transition-all after:duration-350 hover:text-paper hover:after:w-full ${
+              activeSection === 'register' ? 'text-paper after:w-full' : 'text-muted after:w-0'
+            }`}
+          >What&apos;s included</a>
           <a 
             href="#schedule" 
             role="listitem" 
@@ -173,11 +187,12 @@ export default function Navbar() {
           </button>
         </div>
         <nav className="flex flex-col p-[32px_24px] gap-0 flex-1" aria-label="Mobile navigation">
-          <a href="#about" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-t border-rule transition-colors duration-200 hover:text-paper">Features</a>
+          <a href="#top" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-t border-rule transition-colors duration-200 hover:text-paper">Home</a>
+          <a href="#features" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Features</a>
+          <a href="#register" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">What&apos;s included</a>
           <a href="#schedule" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Schedule</a>
           <a href="#faq" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">FAQ</a>
           <a href="#contact" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Contact</a>
-          <a href="#register" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Register Now</a>
         </nav>
         <div className="p-[24px] border-t border-rule">
           <p className="text-dim font-mono font-normal text-[10px] tracking-[0.08em] uppercase">27–28 SEPT 2026 · Model Engineering College, Thrikkakara</p>
