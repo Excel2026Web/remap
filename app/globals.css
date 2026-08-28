@@ -1,3 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07080a;
+  --color-surface: #111214;
+  --color-paper: #f2f0ea;
+  --color-muted: #8a8890;
+  --color-dim: #5c5a62;
+  --color-rule: #1e2024;
+  --color-accent: #c8314a;
+  --color-teal: #6aaeaf;
+  --font-sans: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+}
 /* ==========================================================================
    REMAP 2026 — Design System
    ========================================================================== */
@@ -24,8 +38,8 @@
   --section-y: 120px;
 
   /* Typography */
-  --font-sans: 'Space Grotesk', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
 
   /* Motion */
   --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
@@ -587,7 +601,7 @@ h2 span {
   isolation: isolate;
 }
 
-/* Background image — preserved exactly as specified */
+/* Background image */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -604,14 +618,14 @@ h2 span {
       rgba(7, 8, 10, 0.72) 0%,
       transparent 38%
     ),
-    url('assets/remap-hero-workbench-clear.png');
+    url('/hero-clear.png');
   background-size: cover;
   background-position: 56% center;
   filter: saturate(0.72) contrast(1.03) brightness(0.96);
   will-change: transform;
 }
 
-/* Vertical guide line — left edge, subtle editorial detail */
+/* Vertical guide line */
 .hero::before {
   content: '';
   position: absolute;
@@ -629,22 +643,6 @@ h2 span {
   z-index: 2;
   max-width: 680px;
   padding: clamp(140px, 18vh, 190px) var(--gutter) 120px;
-}
-
-/* Eyebrow label */
-.hero-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 28px;
-  color: var(--teal);
-  font: 500 11px/1.4 var(--font-mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.eyebrow-sep {
-  color: rgba(242, 240, 234, 0.3);
 }
 
 /* H1 */
@@ -681,23 +679,6 @@ h2 span {
   color: var(--paper);
 }
 
-/* Body copy */
-.hero-copy {
-  margin-top: 8px;
-  max-width: 480px;
-  color: rgba(242, 240, 234, 0.7);
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-/* Doors info line */
-.hero-doors {
-  margin-top: 12px;
-  color: var(--teal);
-  font: 400 12px/1 var(--font-mono);
-  letter-spacing: 0.02em;
-}
-
 /* CTA group */
 .hero-actions {
   display: flex;
@@ -715,7 +696,7 @@ h2 span {
   letter-spacing: 0;
 }
 
-/* Hero load animation — JS removes .hero-loading from body */
+/* Hero load animation */
 .hero [data-hero] {
   opacity: 0;
   transform: translateY(14px);
@@ -812,12 +793,9 @@ h2 span {
 }
 
 
-
-
 /* --------------------------------------------------------------------------
    9. Section Layout Base
    -------------------------------------------------------------------------- */
-
 
 .section {
   max-width: var(--max);
@@ -1143,8 +1121,6 @@ h2 span {
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
-
-  /* Gentle pulse */
   animation: pulse 2.4s ease-in-out infinite;
 }
 
@@ -1262,10 +1238,6 @@ h2 span {
   border-bottom: 1px solid var(--rule);
   gap: 0;
   transition: background var(--dur-fast) ease;
-}
-
-.timeline-entry:hover {
-  /* Subtle row hover */
 }
 
 .timeline-entry time {
@@ -1517,24 +1489,9 @@ h2 span {
     border-top: 2px solid transparent;
     border-left: none;
   }
-  
+
   .track-card:hover {
     transform: translateY(0);
-  }
-  /* Hero split-layout — tablet: stack info block */
-  .hero-info-block {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    bottom: 60px;
-  }
-
-  .hero-info-right {
-    justify-content: flex-start;
-  }
-
-  .hero-meta-list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 16px 32px;
   }
 }
 
@@ -1583,19 +1540,13 @@ h2 span {
         rgba(7, 8, 10, 0.90) 0%,
         transparent 52%
       ),
-      url('assets/remap-hero-workbench-clear.png');
+      url('/hero-clear.png');
     background-position: 72% center;
     filter: saturate(0.68) brightness(0.88);
   }
 
   .hero::before {
     display: none;
-  }
-
-  .hero-title-block {
-    top: 96px;
-    left: var(--gutter);
-    right: var(--gutter);
   }
 
   .hero-h1 {
@@ -1607,23 +1558,6 @@ h2 span {
   .hero-h1 em {
     -webkit-text-stroke-width: 1px;
     margin-top: 8px;
-  }
-
-  .hero-info-block {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    bottom: 52px;
-    left: var(--gutter);
-    right: var(--gutter);
-  }
-
-  .hero-info-right {
-    justify-content: flex-start;
-  }
-
-  .hero-meta-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px 24px;
   }
 
   .hero-statement {
