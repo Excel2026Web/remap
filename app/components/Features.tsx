@@ -1,42 +1,12 @@
 'use client';
 
+import { featuresData } from '../data/content';
 import useScrollReveal from '../hooks/useScrollReveal';
 
 export default function Features() {
   useScrollReveal();
 
-  const features = [
-    {
-      title: 'Hands-on Hardware Sessions',
-      description: 'Learn electronics, prototyping and product design with real components.',
-      num: '01'
-    },
-    {
-      title: 'Real-time Project Building',
-      description: 'Collaborate overnight to transform ideas into working prototypes.',
-      num: '02'
-    },
-    {
-      title: 'Industry Connections',
-      description: 'Visit Kerala Startup Mission and network with hardware professionals.',
-      num: '03'
-    },
-    {
-      title: 'Expert Guidance',
-      description: 'Get mentorship from experienced hardware engineers and innovators.',
-      num: '04'
-    },
-    {
-      title: 'Collaborative Learning',
-      description: 'Work in teams to solve complex hardware challenges together.',
-      num: '05'
-    },
-    {
-      title: 'Complete Experience',
-      description: 'From learning to building to networking - all in one event.',
-      num: '06'
-    }
-  ];
+  const features = featuresData;
 
   const hoverColors = ['hover:border-t-teal', 'hover:border-t-accent', 'hover:border-t-[#8a7fc8]'];
 

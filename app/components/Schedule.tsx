@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
+import { scheduleData } from '../data/content';
 
 export default function Schedule() {
   useScrollReveal();
@@ -23,54 +24,40 @@ export default function Schedule() {
     }, 20);
   };
 
-  const day1Schedule = [
-    { time: '1:00 PM - 2:00 PM', activity: 'Registration', venue: 'Front Desk' },
-    { time: '2:00 PM - 2:30 PM', activity: 'Inauguration', venue: 'Internal Auditorium' },
-    { time: '2:30 PM - 3:30 PM', activity: 'Icebreaking Session', venue: 'Elga' },
-    { time: '3:30 PM - 4:00 PM', activity: 'Tea Break', venue: 'CASA' },
-    { time: '4:00 PM - 6:00 PM', activity: 'Hardware Session 1', venue: 'SDPK & Media Hall' },
-    { time: '6:00 PM - 6:10 PM', activity: 'Break', venue: '' },
-    { time: '6:10 PM - 7:30 PM', activity: 'CAD Session 1', venue: 'SDPK & Media Hall' },
-    { time: '7:30 PM - 7:30 PM', activity: 'Break', venue: '' },
-    { time: '7:30 PM - 9:30 PM', activity: 'Hardware Session 2', venue: 'SDPK & Media Hall' },
-    { time: '9:30 PM - 11:30 PM', activity: 'Bharatham / Cultural Activities & Dinner', venue: 'Amphitheatre, Rooms 210 & 209' },
-    { time: '11:30 PM - 12:00 AM', activity: 'CAD Session 2', venue: 'SDPK & Media Hall' },
-  ];
-
-  const day2Schedule = [
-    { time: '12:00 AM - 1:00 AM', activity: 'CAD Session 3', venue: 'SDPK & Media Hall' },
-    { time: '1:00 AM - 1:10 AM', activity: 'Break', venue: '' },
-    { time: '1:10 AM - 3:00 AM', activity: 'Hardware Session 3', venue: 'SDPK & Media Hall' },
-    { time: '3:00 AM - 5:00 AM', activity: 'Break, Jamming & Fun Games', venue: 'Amphitheatre' },
-    { time: '5:00 AM - 7:30 AM', activity: 'Project Building Session', venue: 'SDPK & Media Hall' },
-    { time: '7:30 AM - 8:30 AM', activity: 'Breakfast', venue: 'Rooms 210 & 209' },
-    { time: '8:30 AM - 10:00 AM', activity: 'Project Building Session', venue: 'SDPK & Media Hall' },
-    { time: '10:00 AM - 12:00 PM', activity: 'Batch 1 - Industrial Visit (KSUM)\nBatch 2 - Project Building', venue: 'KSUM\nMedia Hall' },
-    { time: '12:00 PM - 1:30 PM', activity: 'Lunch Break', venue: 'Rooms 210 & 209' },
-    { time: '1:30 PM - 2:50 PM', activity: 'Batch 2 - Industrial Visit (KSUM)\nBatch 1 - Project Building', venue: 'KSUM\nSDPK' },
-    { time: '2:50 PM - 3:00 PM', activity: 'Wrap Up', venue: 'Front Desk' },
-  ];
+  const day1Schedule = scheduleData.day1;
+  const day2Schedule = scheduleData.day2;
 
   const renderSchedule = (schedule: typeof day1Schedule) => (
-    <div className="w-full flex flex-col">
-      <div className="hidden md:grid grid-cols-[1fr_2fr_1fr] gap-[24px] py-[16px] border-b border-rule text-dim font-mono text-[10px] uppercase tracking-[0.1em]">
-        <div>Time</div>
-        <div>Activity</div>
-        <div>Venue</div>
-      </div>
-      {schedule.map((item, i) => (
-        <div key={i} className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-[8px] md:gap-[24px] py-[24px] border-b border-rule transition-colors duration-200 hover:bg-surface/30" data-animate="timeline" data-delay={Math.min(i, 5)}>
-          <div className="text-muted font-mono font-normal text-[12px] md:text-[13px] leading-snug whitespace-nowrap">
-            {item.time}
-          </div>
-          <div className="text-paper text-[15px] md:text-[16px] leading-[1.6] whitespace-pre-line font-medium">
-            {item.activity}
-          </div>
-          <div className="text-dim text-[13px] md:text-[14px] whitespace-pre-line mt-[4px] md:mt-0 font-mono">
-            {item.venue}
-          </div>
-        </div>
-      ))}
+    <div className="w-full overflow-x-auto -mx-[0px]">
+      <table className="w-full min-w-[520px] border-collapse">
+        <thead>
+          <tr className="border-b border-rule">
+            <th className="text-dim font-mono text-[10px] uppercase tracking-[0.1em] text-left py-[14px] pr-[16px] w-[160px] font-normal">Time</th>
+            <th className="text-dim font-mono text-[10px] uppercase tracking-[0.1em] text-left py-[14px] px-[16px] font-normal">Activity</th>
+            <th className="text-dim font-mono text-[10px] uppercase tracking-[0.1em] text-left py-[14px] pl-[16px] w-[160px] font-normal">Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          {schedule.map((item, i) => (
+            <tr
+              key={i}
+              className="border-b border-rule transition-colors duration-200 hover:bg-surface/30 group"
+              data-animate="timeline"
+              data-delay={Math.min(i, 5)}
+            >
+              <td className="text-muted font-mono font-normal text-[12px] leading-snug py-[20px] pr-[16px] align-top whitespace-nowrap">
+                {item.time}
+              </td>
+              <td className="text-paper text-[14px] md:text-[15px] leading-[1.6] whitespace-pre-line font-medium py-[20px] px-[16px] align-top">
+                {item.activity}
+              </td>
+              <td className="text-dim text-[12px] md:text-[13px] whitespace-pre-line font-mono py-[20px] pl-[16px] align-top">
+                {item.venue}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 

@@ -16,9 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'REMAP 3.0 — Build after dark',
-  description:
-    'REMAP 3.0 — One night of practical electronics, good questions, and people who like making things work. Model Engineering College, Thrikkakara.',
+  title: 'REMAP 3.0 | All Kerala Hardware Convention | Excel 2026',
+  description: 'An overnight hardware experience for B.Tech students featuring electronics, prototyping, 3D design, and more. Model Engineering College, Thrikkakara.',
 };
 
 export default function RootLayout({ children }) {

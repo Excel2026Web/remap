@@ -1,6 +1,7 @@
 'use client';
 
 import useScrollReveal from '../hooks/useScrollReveal';
+import { contactData } from '../data/content';
 
 export default function Contact() {
   useScrollReveal();
@@ -15,36 +16,22 @@ export default function Contact() {
           Get in touch with our event coordinators for registration assistance, technical queries or any other information.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[64px] w-full max-w-[800px]">
-          {/* Anna Ison */}
-          <div className="flex flex-col items-center p-[40px] bg-ink border border-rule transition-all duration-350 ease-out hover:border-accent hover:-translate-y-[4px] group/card1" data-animate="fade" data-delay="3">
-            <div className="w-[140px] h-[140px] rounded-full overflow-hidden mb-[24px] border-2 border-rule transition-colors duration-350 group-hover/card1:border-accent">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/annaison.jpg" alt="Anna Ison" className="w-full h-full object-cover filter saturate-0 contrast-[1.1] transition-all duration-500 group-hover/card1:saturate-100" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[24px] md:gap-[40px] lg:gap-[64px] w-full max-w-[800px]">
+          {contactData.map((person, index) => (
+            <div key={index} className={`flex flex-col items-center p-[24px] md:p-[40px] bg-ink border border-rule transition-all duration-350 ease-out hover:border-accent hover:-translate-y-[4px] group/card${index + 1}`} data-animate="fade" data-delay={3 + index}>
+              <div className={`w-[140px] h-[140px] rounded-full overflow-hidden mb-[24px] border-2 border-rule transition-colors duration-350 group-hover/card${index + 1}:border-accent`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={person.image} alt={person.name} className={`w-full h-full object-cover filter saturate-0 contrast-[1.1] transition-all duration-500 group-hover/card${index + 1}:saturate-100`} />
+              </div>
+              <h3 className="text-[22px] font-medium tracking-[-0.02em] text-paper mb-[4px]">{person.name}</h3>
+              <p className="text-dim font-mono text-[11px] uppercase tracking-[0.08em] mb-[24px]">{person.role}</p>
+              <div className="flex flex-col gap-[12px] text-[13px] text-muted font-mono w-full">
+                <a href={`tel:${person.phone.replace(/\s+/g, '')}`} className="hover:text-accent transition-colors">📞 Call</a>
+                <a href={`mailto:${person.email}`} className="hover:text-accent transition-colors">✉️ Mail</a>
+                <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors underline underline-offset-4 decoration-rule hover:decoration-accent">LinkedIn</a>
+              </div>
             </div>
-            <h3 className="text-[22px] font-medium tracking-[-0.02em] text-paper mb-[4px]">Anna Ison</h3>
-            <p className="text-dim font-mono text-[11px] uppercase tracking-[0.08em] mb-[24px]">Event Coordinator | EV5</p>
-            <div className="flex flex-col gap-[12px] text-[13px] text-muted font-mono w-full">
-              <a href="tel:+919072412897" className="hover:text-accent transition-colors">📞 Call</a>
-              <a href="mailto:remap@excelmec.org" className="hover:text-accent transition-colors">✉️ Mail</a>
-              <a href="https://www.linkedin.com/in/anna-ison-95a39635a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors underline underline-offset-4 decoration-rule hover:decoration-accent">LinkedIn</a>
-            </div>
-          </div>
-
-          {/* Nevin Skariah */}
-          <div className="flex flex-col items-center p-[40px] bg-ink border border-rule transition-all duration-350 ease-out hover:border-accent hover:-translate-y-[4px] group/card2" data-animate="fade" data-delay="4">
-            <div className="w-[140px] h-[140px] rounded-full overflow-hidden mb-[24px] border-2 border-rule transition-colors duration-350 group-hover/card2:border-accent">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/nevinskariah.jpg" alt="Nevin Skariah" className="w-full h-full object-cover filter saturate-0 contrast-[1.1] transition-all duration-500 group-hover/card2:saturate-100" />
-            </div>
-            <h3 className="text-[22px] font-medium tracking-[-0.02em] text-paper mb-[4px]">Nevin Skariah</h3>
-            <p className="text-dim font-mono text-[11px] uppercase tracking-[0.08em] mb-[24px]">Technical Head | CU5</p>
-            <div className="flex flex-col gap-[12px] text-[13px] text-muted font-mono w-full">
-              <a href="tel:+919142157542" className="hover:text-accent transition-colors">📞 Call</a>
-              <a href="mailto:remap@excelmec.org" className="hover:text-accent transition-colors">✉️ Mail</a>
-              <a href="https://www.linkedin.com/in/nevin-skariah-404a0a333?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors underline underline-offset-4 decoration-rule hover:decoration-accent">LinkedIn</a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
