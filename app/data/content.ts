@@ -44,7 +44,7 @@ export const registerData = {
   includes: [
     "Hands-on hardware sessions covering Electronics, prototyping and 3D designing",
     "Industrial visit to Kerala Startup Mission (KSUM)",
-    "Overnight project-building session with expert guidance",
+    "Project-building session with expert guidance",
     "Midnight jamming session for cultural experience",
     "All meals included",
     "Networking opportunities with hardware engineers",
