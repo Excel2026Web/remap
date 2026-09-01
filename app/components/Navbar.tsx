@@ -195,7 +195,7 @@ export default function Navbar() {
           <a href="#contact" onClick={closeMobileMenu} className="font-sans font-medium text-[22px] tracking-[-0.04em] text-muted py-[14px] border-b border-rule transition-colors duration-200 hover:text-paper">Contact</a>
         </nav>
         <div className="p-[24px] border-t border-rule">
-          <p className="text-dim font-mono font-normal text-[10px] tracking-[0.08em] uppercase">27–28 SEPT 2026 · Model Engineering College, Thrikkakara</p>
+          <p className="text-dim font-mono font-normal text-[10px] tracking-[0.08em] uppercase">19–20 SEPT 2026 · Model Engineering College, Thrikkakara</p>
         </div>
       </div>
     </>
