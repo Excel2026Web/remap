@@ -1,6 +1,6 @@
 export const heroData = {
   title: "REMAP 3.0",
-  description: "All-Kerala Hardware Convention — Part of Excel 2025 at Model Engineering College, Thrikkakara. An overnight hardware experience for B.Tech students.",
+  description: "All-Kerala Hardware Convention Part of Excel 2026 at Model Engineering College, Thrikkakara. An overnight hardware experience for B.Tech students.",
   date: "September 19, 20 2026",
   venue: "Govt. Model Engineering College, Thrikkakara"
 };

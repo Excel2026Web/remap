@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-[100dvh] flex flex-col justify-center border-t border-rule bg-surface" aria-labelledby="contact-heading">
       <div className="max-w-[1160px] w-full mx-auto px-[24px] md:px-[5vw] lg:px-[7vw] py-[80px] lg:py-[120px] flex flex-col items-center text-center">
-        <p className="text-teal font-mono font-medium text-[10px] leading-none tracking-[0.12em] uppercase mb-[20px]" data-animate="tag">06 / GET IN TOUCH</p>
+        <p className="text-teal font-mono font-medium text-[10px] leading-none tracking-[0.12em] uppercase mb-[20px]" data-animate="tag">05 / GET IN TOUCH</p>
         <h2 id="contact-heading" className="max-w-[720px] mb-[24px] text-[clamp(32px,4vw,60px)] font-medium leading-[1] tracking-[-0.07em] uppercase" data-animate="mask" data-delay="1">
           HAVE QUESTIONS ABOUT <br className="hidden md:block"/><span className="text-accent">REMAP 3.0?</span>
         </h2>

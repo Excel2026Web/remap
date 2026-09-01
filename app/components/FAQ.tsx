@@ -17,7 +17,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="min-h-[100dvh] content-center max-w-[1160px] mx-auto px-[24px] md:px-[5vw] lg:px-[7vw] py-[80px] lg:py-[120px] grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-[32px] lg:gap-[60px] items-start border-t border-rule" aria-labelledby="faq-heading">
       <div className="flex flex-col">
-        <div className="text-teal font-mono font-medium text-[10px] leading-none tracking-[0.12em] uppercase mb-[20px]" data-animate="tag">05 / GOOD QUESTIONS</div>
+        <div className="text-teal font-mono font-medium text-[10px] leading-none tracking-[0.12em] uppercase mb-[20px]" data-animate="tag">04 / GOOD QUESTIONS</div>
         <h2 id="faq-heading" className="text-[clamp(40px,4.8vw,70px)] font-medium leading-[0.88] tracking-[-0.07em] uppercase" data-animate="mask" data-delay="1">
           BEFORE YOU<br /><span className="text-accent">PLUG IN.</span>
         </h2>
