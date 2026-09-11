@@ -82,7 +82,7 @@ export const scheduleData = {
 export const faqData = [
   {
     question: "What is REMAP 3.0 and who is it for?",
-    answer: "REMAP 3.0 is an All-Kerala Hardware Convention conducted as part of Excel 2026 at Model Engineering College, Thrikkakara. The programme is intended for 2nd, 3rd and 4th year B.Tech students across Kerala who are interested in hardware, CAD, prototyping and hands-on engineering. It provides participants with opportunities to learn, build, collaborate and interact with fellow hardware enthusiasts."
+    answer: "REMAP 3.0 is an All-Kerala Hardware Convention conducted as part of Excel 2026 at Model Engineering College, Thrikkakara. The programme is intended for 1st, 2nd, 3rd and 4th year B.Tech students across Kerala who are interested in hardware, CAD, prototyping and hands-on engineering. It provides participants with opportunities to learn, build, collaborate and interact with fellow hardware enthusiasts."
   },
   {
     question: "What can I expect from the overnight programme?",
